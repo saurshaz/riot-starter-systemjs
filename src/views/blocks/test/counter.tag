@@ -1,7 +1,7 @@
 const StoreWatcher = require('/src/lib/utils/storex.js')
 const RouterX = require('/src/lib/utils/routerx.js')
 const Fyler = require('/src/lib/vendor/Fyler.js')
-const R = require('ramda')
+//const R = require('ramda')
 
 
 <counter>

@@ -28,8 +28,10 @@ module.exports = {
           page: extraParams.page
         }
         
-        require('../../views/blocks/' + this.nextView + '/' + extraParams.fragment + '.tag!')
-        riot.mount(extraParams.target, extraParams.fragment, options)
+        // use special async import as the next view is not declared as a dependency of this file
+        System.import('/src/views/blocks/' + this.nextView + '/' + extraParams.fragment + '.tag!').then(function(){
+          riot.mount(extraParams.target, extraParams.fragment, options)
+        })
       } else {
         document.location.href = targetUri
       }
