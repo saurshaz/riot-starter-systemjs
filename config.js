@@ -21,10 +21,10 @@ var ESNoBuildConfig = {
     },
     map: {
         'riot': '/src/lib/vendor/riot.js',
-        'plugin-babel': '/node_modules/systemjs-plugin-babel/plugin-babel.js',
+        'plugin-babel': 'https://dl.dropboxusercontent.com/u/131236597/packages/systemjs-plugin-babel/plugin-babel.js',
         'riot-router': '/src/lib/vendor/riot-router.js',
         'tag-loader': '/tag/tag-loader.js',
-        'systemjs-babel-build': '/node_modules/systemjs-plugin-babel/systemjs-babel-browser.js'
+        'systemjs-babel-build': 'https://dl.dropboxusercontent.com/u/131236597/packages/systemjs-plugin-babel/systemjs-babel-browser.js'
     }
 };
 
