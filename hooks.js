@@ -5,12 +5,15 @@ module.exports = {
   // config.filepath is the created file path
   // config.db is the db instance for any db operations
   postAddFileToDatabase: function (config, cb) {
-    console.log(" *** adding new files ****")
+    // console.log('config ', config)
+    let new_file_path = config.filepath.slice('/Users/saurabhsharma/projects/frontend-app/riot-one/'.length)
+    // console.log(" *** adding new files ****")
     config.db.collection('fs.files').update({_id: config._id},
       {
         '$set': {
-            "filename":"/appler/saurshaz@gmail.com/appler-riot-one/"+config.filename, 
-            "metadata.filename" : "/appler/saurshaz@gmail.com/appler-riot-one/"+config.filename, 
+            "filename" : "/appler/saurshaz@gmail.com/appler-riot-one/"+new_file_path, 
+            
+            "metadata.filename" : "/appler/saurshaz@gmail.com/appler-riot-one/"+new_file_path, 
             "metadata.project_id" : "appler-riot-one", 
             "metadata.id" : "appler-riot-one", 
             "metadata.active" : true, 
@@ -19,7 +22,7 @@ module.exports = {
             "metadata.date_updated" : "2016-04-22T05:21:14.376+0000", 
             "metadata.username" : "saurshaz@gmail.com", 
             "metadata.user_token" : "saurshaz@gmail.com", 
-            "metadata._name" : "/appler/saurshaz@gmail.com/appler-riot-one/"+config.filename, 
+            "metadata._name" : "/appler/saurshaz@gmail.com/appler-riot-one/"+new_file_path, 
             "metadata.owner" : "saurshaz@gmail.com"
         }
       },
