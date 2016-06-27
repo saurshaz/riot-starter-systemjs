@@ -1,8 +1,11 @@
 {
-  "name": "es-no-build",
+  "name": "riot-one",
   "version": "0.1.0",
   "description": "Frictionless JavaScript in ES6/ES2015 and beyond.",
-  "scripts": {},
+  "scripts": {
+    "start": "node_modules/.bin/http-server .",
+    "test": "node_modules/.bin/mocha test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lastmjs/es-no-build.git"
@@ -17,6 +20,8 @@
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
+    "http-server": "^0.9.0",
+    "mocha": "^2.5.3",
     "systemjs": "^0.19.31",
     "systemjs-plugin-babel": "0.0.12"
   }
